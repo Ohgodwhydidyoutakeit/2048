@@ -4,9 +4,13 @@ import './Cell.css'
 
 interface ICellProps {
     value: number,
-    class: string
+    className: string
 }
 
-export const Cell: FC = () => {
-    return (<></>)
+export const Cell: FC<ICellProps> = ({ value, className }) => {
+    return (
+        <div className={`cell-container ${className}`}>
+            {value}
+        </div>
+    )
 }
